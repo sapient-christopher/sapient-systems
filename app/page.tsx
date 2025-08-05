@@ -191,7 +191,7 @@ const LandingPage = () => {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-orange-500/50 transition-all">
               <Brain className="w-12 h-12 text-orange-400 mb-4" />
               <h3 className="text-xl font-bold mb-3">Limited AI Integration</h3>
-              <p className="text-gray-400">Your valuable data sits idle with no easy way to extract patterns or actionable insights through customizable AI analysis</p>
+              <p className="text-gray-400">Your data either sits completely idle or is restricted to limited AI analysis capabilities</p>
             </div>
             
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-yellow-500/50 transition-all">
@@ -423,7 +423,7 @@ I might anticipate more bear action early and then see what happens.
             <div className="text-center">
               <TrendingUp className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Trader-Built</h3>
-              <p className="text-gray-400">Created by an active day trader who uses it daily</p>
+              <p className="text-gray-400">Created by active day traders who uses the tool daily</p>
             </div>
 
             <div className="text-center">
@@ -466,7 +466,7 @@ I might anticipate more bear action early and then see what happens.
           </div>
           
           <p className="text-gray-500 mt-8">
-            Coming soon • No credit card required • Be first to know
+            Coming soon • Become Sapient
           </p>
         </div>
       </section>
@@ -479,14 +479,15 @@ I might anticipate more bear action early and then see what happens.
               <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Sapient Systems
               </h3>
-              <p className="text-gray-500 mt-1">Transforming data into trading success</p>
+              {/* <p className="text-gray-500 mt-1">Transforming data into trading success</p> */}
             </div>
             
             <div className="flex gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Transforming data into trading success</a>
+              {/* <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Contact</a>
-              <a href="/investors" className="hover:text-gray-300 transition-colors">Investors</a>
+              <a href="/investors" className="hover:text-gray-300 transition-colors">Investors</a> */}
             </div>
           </div>
           
