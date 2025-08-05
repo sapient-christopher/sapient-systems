@@ -380,9 +380,9 @@ const InvestorPage = () => {
       {/* Contact CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's Discuss the Opportunity</h2>
+          <h2 className="text-3xl font-bold mb-4">Let&apos;s Discuss the Opportunity</h2>
           <p className="text-xl text-gray-400 mb-8">
-            I'd love to show you a live demo and discuss how Sapient can transform trading performance
+            I&apos;d love to show you a live demo and discuss how Sapient can transform trading performance
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

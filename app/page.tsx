@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ChevronRight, BarChart3, Brain, Database, Shield, Menu, X, TrendingUp, FileText, Users, Check, ArrowRight, Zap, Heart, Clock, Lock, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from &apos;react&apos;;
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from &apos;recharts&apos;;
+import { ChevronRight, BarChart3, Brain, Database, Shield, Menu, X, TrendingUp, FileText, Users, Check, ArrowRight, Zap, Heart, Clock, Lock, Sparkles } from &apos;lucide-react&apos;;
 
 const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -187,8 +187,8 @@ const LandingPage = () => {
                   onClick={() => setActiveWorkflowStep(index)}
                   className={`relative px-8 py-4 rounded-xl font-semibold transition-all transform ${
                     activeWorkflowStep === index 
-                      ? 'scale-110 shadow-2xl' 
-                      : 'scale-100 opacity-70 hover:opacity-100'
+                      ? &apos;scale-110 shadow-2xl&apos; 
+                      : &apos;scale-100 opacity-70 hover:opacity-100&apos;
                   }`}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-r ${step.color} rounded-xl`} />
@@ -329,7 +329,7 @@ const LandingPage = () => {
 ### Session Reflection
 - Best Decision: Waited for confirmation before entry
 - Mistake: Sized up too quickly on second trade
-- Tomorrow's Focus: Maintain position sizing discipline`}</code>
+- Tomorrow&apos;s Focus: Maintain position sizing discipline`}</code>
             </pre>
           </div>
         </div>
