@@ -382,14 +382,14 @@ I might anticipate more bear action early and then see what happens.
 
 ##### Commentary
 ###### Pre-Trade
-- Pre-Entry Emotion: C risk because against M05 LQ
+- Pre-Entry Emotion: C risk, against M05 LQ, but confident in higher timeframe read.
 
 ###### During Trade
 - [10:23:33 AM ET] Idea is holding on but price is failing to continue lower.
 - [10:26:21 AM ET] I move my stop loss a little when the price breaks lower.
 
 ###### Reflections
-- Lessons: Good trade. Better entry was the sweep of the lower ATT.
+- Lessons: Good trade. Better entry was the sweep of internal highs.
 
 ## Post-Trading Summary
 - Good trading. Curious to see how AI helps me find lessons!`}</code>
@@ -483,7 +483,9 @@ I might anticipate more bear action early and then see what happens.
             </div>
             
             <div className="flex gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-gray-300 transition-colors">Transforming data into trading success</a>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Transforming data into trading success
+              </h3>
               {/* <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Contact</a>
