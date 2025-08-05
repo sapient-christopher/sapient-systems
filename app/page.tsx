@@ -129,7 +129,7 @@ const LandingPage = () => {
               The First AI-Focused Trading Journal
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Transform your trading data into actual results. Built by a trader, for traders who are serious about systematic improvement.
+              Transform your trading data into actual results. Built and used by traders who are serious about systematic improvement.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -483,7 +483,7 @@ I might anticipate more bear action early and then see what happens.
             </div>
             
             <div className="flex gap-6 text-sm text-gray-500">
-              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="text-l font-bold bg-gradient-to-r from-purple-600 to-blue-400 bg-clip-text text-transparent">
                 Transforming data into trading success
               </h3>
               {/* <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
