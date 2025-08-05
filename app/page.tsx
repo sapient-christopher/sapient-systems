@@ -4,10 +4,33 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ChevronRight, BarChart3, Brain, Database, Shield, Menu, X, TrendingUp, FileText, Users, Check, ArrowRight, Zap, Heart, Clock, Lock, Sparkles } from 'lucide-react';
+import { supabase } from './lib/supabase'
 
 const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeWorkflowStep, setActiveWorkflowStep] = useState(0);
+
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleWaitlist = async () => {
+    setLoading(true);
+    try {
+      const { error } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+      
+      if (error) throw error;
+      
+      setSubmitted(true);
+      setEmail('');
+    } catch (error) {
+      alert('Error joining waitlist. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Auto-rotate workflow steps
   useEffect(() => {
@@ -110,12 +133,23 @@ const LandingPage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center gap-2 shadow-lg">
-                Join the Waitlist <Sparkles className="w-5 h-5" />
-              </button>
-              <button className="border border-gray-700 hover:border-gray-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                View Demo
-              </button>
+              {!submitted ? (
+                <>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:outline-none"
+                    required
+                  />
+                  <button onClick={handleWaitlist} disabled={loading || !email} className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+                    {loading ? 'Joining...' : 'Join Waitlist'}
+                  </button>
+                </>
+              ) : (
+                <p className="text-green-400 text-lg">✅ You're on the list! We'll be in touch soon.</p>
+              )}
             </div>
           </div>
 
@@ -156,14 +190,14 @@ const LandingPage = () => {
             
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-orange-500/50 transition-all">
               <Brain className="w-12 h-12 text-orange-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3">No AI Integration</h3>
-              <p className="text-gray-400">Your valuable data sits idle with no easy way to extract patterns or actionable insights through modern AI analysis</p>
+              <h3 className="text-xl font-bold mb-3">Limited AI Integration</h3>
+              <p className="text-gray-400">Your valuable data sits idle with no easy way to extract patterns or actionable insights through customizable AI analysis</p>
             </div>
             
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-yellow-500/50 transition-all">
               <Heart className="w-12 h-12 text-yellow-400 mb-4" />
               <h3 className="text-xl font-bold mb-3">Missing Psychology</h3>
-              <p className="text-gray-400">They track trades but completely ignore the emotional and physical factors that actually drive your performance</p>
+              <p className="text-gray-400">They track trades but completely ignore the emotional and physical factors that impact performance</p>
             </div>
           </div>
         </div>
@@ -411,9 +445,25 @@ I might anticipate more bear action early and then see what happens.
             Join the waitlist to be among the first to experience the future of trading journals
           </p>
           
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-5 rounded-lg text-xl font-semibold transition-all transform hover:scale-105 shadow-2xl">
-            Join the Waitlist
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {!submitted ? (
+              <>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:outline-none"
+                  required
+                />
+                <button onClick={handleWaitlist} disabled={loading || !email} className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+                  {loading ? 'Joining...' : 'Join Waitlist'}
+                </button>
+              </>
+            ) : (
+              <p className="text-green-400 text-lg">✅ You're on the list! We'll be in touch soon.</p>
+            )}
+          </div>
           
           <p className="text-gray-500 mt-8">
             Coming soon • No credit card required • Be first to know
