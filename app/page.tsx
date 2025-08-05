@@ -314,23 +314,53 @@ const LandingPage = () => {
           <div className="mt-16 bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
             <h3 className="text-xl font-bold mb-4">Example AI-Ready Export</h3>
             <pre className="text-sm text-gray-400 overflow-x-auto">
-              <code>{`## Trading Session: 2025-08-05
+              <code>{`# Trading Analysis - 2025-07-29
 
-### Pre-Market State
-- Emotional: Confident, Well-rested
-- Physical: 8 hours sleep, no caffeine yet
-- Market Bias: Bullish on tech sector
+## Pre-Trading Information
+### Personal Preparation & Context:
+- Pre-Trading Feelings: I feel good. Slept well. Seeing things pretty clearly even though I haven't meditated.
+- Recovery Score: 58%
+- Sleep Score: 83%
+- Strain Score: 12.5
+- Pre-Trading Tasks: 1/2 completed
 
-### Trades Executed
-1. **NVDA Long** - Entry: $452.30, Exit: $456.85
-   - Emotion at entry: Confident
-   - During trade: "Seeing strong momentum, adding to position"
-   - Exit emotion: Satisfied, followed plan
+### Pre-Market Analysis:
+#### General Commentary: 
+I might anticipate more bear action early and then see what happens.
 
-### Session Reflection
-- Best Decision: Waited for confirmation before entry
-- Mistake: Sized up too quickly on second trade
-- Tomorrow's Focus: Maintain position sizing discipline`}</code>
+...
+
+## Live Trading Data
+### Economic Releases
+- 08:30 ET - Goods Trade Balance (Expected: -$98.4B) → Actual: -$85.99B 
+- 10:00 ET - JOLTs Job Openings (Expected: 7.55M) → Actual: 7.437M
+
+### Mid-Trading Observations:
+- [09:30 ET] Trade: Couple of pre-equity open trades presented that I was not read for
+- [09:36 ET] Market: MNQ Pops early after the equity open after haveing reached SSL. Two trades presented in the push up. I was not ready for either. High impact news in 24 minutes so I take a break and let it develop.
+
+### Trades Executed (2 total):
+
+#### H01 Fail Flip with M01 FVG rejection - Jul 29 10:04 AM - ATT
+##### Execution Details
+- Symbol: MNQ
+- Direction: Short
+- Contracts: 5
+...
+
+##### Commentary
+###### Pre-Trade
+- Pre-Entry Emotion: C risk because against M05 LQ (breaks wick block, trading before it confirms close below) and also price hasn't closed through the first bear DA for continuation (not a requirement for fail flips, but would certainly be better had it done so)
+
+###### During Trade
+- [10:23:33 AM ET] Idea is holding on but price is failing to continue lower... no long entries present, so just holding on here.
+- [10:26:21 AM ET] I move my stop loss a little when the STL breaks because it effectively presents a new entry.
+- [10:27:44 AM ET] I move to above the M01 impulse that leads to the sweep of london low instead of B/E. HTis retains about 1/4 of the risk I put on the trade while also allowing the test of the liquidating FVG... so remaining risk is about 1/8 B-Risk
+
+###### Reflections
+- Lessons: Good trade again. I think better entry was the sweep of the lower ATT. I did right by using the consolidation of ATTs as the stop. Otherwise all good.
+
+...`}</code>
             </pre>
           </div>
         </div>
