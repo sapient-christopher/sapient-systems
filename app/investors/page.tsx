@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Lock, FileText, TrendingUp, Users } from 'lucide-react';
-import { ThemeToggle } from './components/ThemeToggle';
+import Link from 'next/link';
 import { reports } from './data/reports';
 
 const InvestorPage = () => {
@@ -78,7 +78,6 @@ const InvestorPage = () => {
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Sapient Systems - Investor Portal
               </h1>
-              {/* {authenticated && <ThemeToggle />} */}
             </div>
             <div className="flex items-center gap-2">
               <span className="text-sm text-muted-foreground mr-4">
@@ -117,7 +116,7 @@ const InvestorPage = () => {
 
         {/* Quick Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <a href="/investors/research" className="group">
+          <Link href="/investors/research" className="group">
             <div className="bg-muted/50 rounded-xl p-6 border border-border hover:border-blue-500 transition-all">
               <FileText className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-bold mb-2">Research & Reports</h3>
@@ -132,7 +131,7 @@ const InvestorPage = () => {
                 </p>
               )}
             </div>
-          </a>
+          </Link>
 
           <div className="bg-muted/50 rounded-xl p-6 border border-border opacity-50">
             <TrendingUp className="w-12 h-12 text-gray-400 mb-4" />

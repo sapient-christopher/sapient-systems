@@ -3,7 +3,7 @@
 import React from 'react';
 import { ReportLayout } from '../../components/ReportLayout';
 import { DataTable } from '../../components/DataTable';
-import { TrendingUp, DollarSign, Users, CheckCircle, AlertCircle } from 'lucide-react';
+import { CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function FinancialProjection() {
   return (
@@ -66,7 +66,7 @@ export default function FinancialProjection() {
         <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-4">
           <p className="text-sm">
             <strong>Market Validation:</strong> TradeZella achieved 20K+ users with NO free tier, 
-            proving traders will pay for quality tools. Our generous "free trial" approach should 
+            proving traders will pay for quality tools. Our generous &ldquo;free trial&rdquo; approach should 
             convert at least 20% of users who are serious enough to download and try the software.
           </p>
         </div>
@@ -82,10 +82,10 @@ export default function FinancialProjection() {
             headers={['Period', 'Total Users', 'Conversion', 'Premium Users', 'Ultra Users', 'MRR']}
             rows={[
               ['Beta (Mo 1-6)', '500', '0%', '0', '0', '$0'],
-              ['Launch (Mo 7-12)', '2,000', '20%', '320', '80', <span className="text-green-400">$6,200</span>],
-              ['Growth (Mo 13-24)', '10,000', '20%', '1,600', '400', <span className="text-green-400">$62,000</span>],
-              ['Scale (Year 3)', '30,000', '20%', '4,800', '1,200', <span className="text-green-400">$186,000</span>],
-              ['Mature (Year 5)', '75,000', '20%', '12,000', '3,000', <span className="text-green-400">$465,000</span>],
+              ['Launch (Mo 7-12)', '2,000', '20%', '320', '80', <span key="mrr1" className="text-green-400">$6,200</span>],
+              ['Growth (Mo 13-24)', '10,000', '20%', '1,600', '400', <span key="mrr2" className="text-green-400">$62,000</span>],
+              ['Scale (Year 3)', '30,000', '20%', '4,800', '1,200', <span key="mrr3" className="text-green-400">$186,000</span>],
+              ['Mature (Year 5)', '75,000', '20%', '12,000', '3,000', <span key="mrr4" className="text-green-400">$465,000</span>],
             ]}
           />
         </div>
@@ -127,12 +127,12 @@ export default function FinancialProjection() {
         <DataTable
           headers={['Metric', 'Base Case', 'Optimized', 'Improvement']}
           rows={[
-            ['Time to Breakeven', '34 months', '14 months', <span className="text-green-400">20 months faster</span>],
-            ['Capital Required', '$383,000', '$190,000', <span className="text-green-400">50% less</span>],
-            ['Month 12 Revenue', '$1,240', '$6,200', <span className="text-green-400">5x</span>],
-            ['Year 3 Revenue', '$51,000', '$186,000', <span className="text-green-400">3.6x</span>],
-            ['Year 5 Revenue', '$135,000', '$465,000', <span className="text-green-400">3.4x</span>],
-            ['Year 5 Profit', '$1.7M', '$5.9M', <span className="text-green-400">3.5x</span>],
+            ['Time to Breakeven', '34 months', '14 months', <span key="imp1" className="text-green-400">20 months faster</span>],
+            ['Capital Required', '$383,000', '$190,000', <span key="imp2" className="text-green-400">50% less</span>],
+            ['Month 12 Revenue', '$1,240', '$6,200', <span key="imp3" className="text-green-400">5x</span>],
+            ['Year 3 Revenue', '$51,000', '$186,000', <span key="imp4" className="text-green-400">3.6x</span>],
+            ['Year 5 Revenue', '$135,000', '$465,000', <span key="imp5" className="text-green-400">3.4x</span>],
+            ['Year 5 Profit', '$1.7M', '$5.9M', <span key="imp6" className="text-green-400">3.5x</span>],
           ]}
         />
       </section>

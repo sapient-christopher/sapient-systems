@@ -67,7 +67,7 @@ export default function ResearchPage() {
             <div className="flex items-center gap-2">
               <Lock className="w-5 h-5 text-yellow-500" />
               <p className="text-sm">
-                <strong>Team View:</strong> You're seeing all reports including drafts. 
+                <strong>Team View:</strong> You&apos;re seeing all reports including drafts. 
                 Investors only see published reports.
               </p>
             </div>
