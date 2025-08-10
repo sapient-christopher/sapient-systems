@@ -3,7 +3,23 @@
 
 import React, { useState, useEffect } from 'react';
 import { supabase } from './lib/supabase'
-
+// Add these imports to your existing imports in app/page.tsx
+import { 
+  X, 
+  Menu, 
+  Shield, 
+  Clock, 
+  Brain, 
+  Heart, 
+  ArrowRight, 
+  Check, 
+  Zap, 
+  FileText, 
+  Sparkles, 
+  Lock, 
+  TrendingUp, 
+  Users 
+} from 'lucide-react';
 const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeWorkflowStep, setActiveWorkflowStep] = useState(0);
@@ -23,7 +39,7 @@ const LandingPage = () => {
       
       setSubmitted(true);
       setEmail('');
-    } catch (error) {
+    } catch (err) {
       alert('Error joining waitlist. Please try again.');
     } finally {
       setLoading(false);
