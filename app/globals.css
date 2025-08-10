@@ -8,6 +8,29 @@
   --muted-foreground: #737373;
   --border: #e5e5e5;
   
+  /* Semantic colors for data visualization - Light Mode */
+  --color-positive: #16a34a;      /* green-600 - growth, success, profits */
+  --color-negative: #dc2626;      /* red-600 - losses, warnings, declines */
+  --color-primary: #2563eb;       /* blue-600 - primary data, main metrics */
+  --color-secondary: #7c3aed;     /* purple-600 - secondary data, supporting info */
+  --color-warning: #d97706;       /* amber-600 - caution, attention needed */
+  --color-info: #0891b2;          /* cyan-600 - informational, neutral data */
+  
+  /* Report-specific colors - Monochrome in light mode for professional financial look */
+  --color-report-positive: #171717;    /* Same as foreground */
+  --color-report-negative: #171717;    /* Same as foreground */
+  --color-report-primary: #171717;     /* Same as foreground */
+  --color-report-secondary: #171717;   /* Same as foreground */
+  --color-report-warning: #171717;     /* Same as foreground */
+  --color-report-info: #171717;        /* Same as foreground */
+  
+  /* Chart/visualization specific (optional) */
+  --color-chart-1: #3b82f6;       /* blue-500 */
+  --color-chart-2: #10b981;       /* emerald-500 */
+  --color-chart-3: #f59e0b;       /* amber-500 */
+  --color-chart-4: #8b5cf6;       /* violet-500 */
+  --color-chart-5: #ec4899;       /* pink-500 */
+  
   /* Your existing font variables */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -20,9 +43,31 @@
   --muted: #262626;
   --muted-foreground: #a3a3a3;
   --border: #262626;
+  
+  /* Semantic colors for data visualization - Dark Mode */
+  --color-positive: #4ade80;      /* green-400 - growth, success, profits */
+  --color-negative: #f87171;      /* red-400 - losses, warnings, declines */
+  --color-primary: #60a5fa;       /* blue-400 - primary data, main metrics */
+  --color-secondary: #a78bfa;     /* purple-400 - secondary data, supporting info */
+  --color-warning: #fb923c;       /* orange-400 - caution, attention needed */
+  --color-info: #22d3ee;          /* cyan-400 - informational, neutral data */
+  
+  /* Report-specific colors - Colorful in dark mode for better visibility */
+  --color-report-positive: #4ade80;    /* green-400 */
+  --color-report-negative: #f87171;    /* red-400 */
+  --color-report-primary: #60a5fa;     /* blue-400 */
+  --color-report-secondary: #a78bfa;   /* purple-400 */
+  --color-report-warning: #fb923c;     /* orange-400 */
+  --color-report-info: #22d3ee;        /* cyan-400 */
+  
+  /* Chart/visualization specific (optional) */
+  --color-chart-1: #60a5fa;       /* blue-400 */
+  --color-chart-2: #34d399;       /* emerald-400 */
+  --color-chart-3: #fbbf24;       /* amber-400 */
+  --color-chart-4: #a78bfa;       /* violet-400 */
+  --color-chart-5: #f472b6;       /* pink-400 */
 }
 
-/* Remove the @theme directive as it's causing conflicts */
 /* Keep your existing body styles */
 body {
   background: var(--background);
@@ -42,4 +87,20 @@ body {
 
 .light .investor-gradient {
   background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+}
+
+@theme {
+  --color-positive: var(--color-positive);
+  --color-negative: var(--color-negative);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+  
+  --color-report-positive: var(--color-report-positive);
+  --color-report-negative: var(--color-report-negative);
+  --color-report-primary: var(--color-report-primary);
+  --color-report-secondary: var(--color-report-secondary);
+  --color-report-warning: var(--color-report-warning);
+  --color-report-info: var(--color-report-info);
 }
