@@ -40,6 +40,7 @@ const LandingPage = () => {
       setSubmitted(true);
       setEmail('');
     } catch (err) {
+      console.error('Waitlist error:', err);  // Add this line to use 'err'
       alert('Error joining waitlist. Please try again.');
     } finally {
       setLoading(false);

@@ -20,8 +20,9 @@ const reportComponents: Record<string, React.ComponentType> = {
 // If someone has the direct URL, they can view any report
 // This is intentional for sharing draft links internally
 
-export default function ReportPage({ params }: { params: { slug: string } }) {
-  const ReportComponent = reportComponents[params.slug];
+export default async function ReportPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const ReportComponent = reportComponents[slug];
   
   if (!ReportComponent) {
     notFound();
