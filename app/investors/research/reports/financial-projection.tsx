@@ -10,7 +10,7 @@ export default function FinancialProjection() {
     <ReportLayout
       title="5-Year SaaS Financial Projection"
       subtitle="Optimized 20% Conversion Model"
-      date="January 2025"
+      date="August 2025"
       readTime="8 min"
     >
       {/* Executive Summary */}
